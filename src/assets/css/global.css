@@ -1,0 +1,12 @@
+.text-center {
+  text-align: center;
+}
+
+.color-2 {
+  color: gray;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}

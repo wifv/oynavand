@@ -1,0 +1,15 @@
+.introduction-page {
+  background: url(../images/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 900px;
+  margin-bottom: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-page h1 {
+  font-size: 40px;
+  color: white;
+}

@@ -1,0 +1,26 @@
+.small-slides-variant-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
+  gap: 30px;
+}
+
+.landing-slide-small-variant-2 {
+  box-shadow: 0 0 1px 1px gray;
+}
+
+@media (max-width: 600px) {
+  .small-slides-variant-2 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.products-page {
+  margin-bottom: 300px;
+}
+
+@media (max-width: 546px) {
+  .small-slides-variant-2 {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 5px;
+  }
+}
