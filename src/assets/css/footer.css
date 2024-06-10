@@ -16,5 +16,12 @@
 .footer-links {
   display: flex;
   flex-direction: column;
-
 }
+
+.footer-section-2-links,
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
