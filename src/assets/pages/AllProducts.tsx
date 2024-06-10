@@ -1,8 +1,12 @@
 const AllProducts = () => {
-  fetch("bombaxon", {
-    
-  })
-  .then()
+  // fetch("bombaxon", {
+  //   method: "GET",
+  //   headers: {}
+  // })
+  // .then(response => {response.json()})
+  // .then((data): any => {
+  //   console.log(data)
+  // })
 
   return (
     <div>

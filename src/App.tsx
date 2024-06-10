@@ -3,7 +3,7 @@ import Products from "./assets/pages/Products"
 import Landing from "./assets/pages/Landing"
 import './assets/css/global.css'
 import './app.css'
-import Contact from "./assets/pages/Contact"
+import Footer from "./assets/pages/Footer"
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
         <Landing />
         <Products />
       </div>
+      <Footer />
     </main>
   )
 }

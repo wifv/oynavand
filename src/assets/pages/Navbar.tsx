@@ -16,11 +16,11 @@ const Navbar = () => {
       <nav className="nav">
           <a className="logo" href='/'>OYNAVAND</a>
           <ul className={showMenu ? "active-nav-right" : "nav-right"} id='nav-right'>
-              <li className="nav-item"><a href='#about'>About</a></li>
-              <li className="nav-item"><a href='#skills'>Skills</a></li>
-              <li className="nav-item"><a href='#projects'>Projects</a></li>
+              <li className="nav-item"><a href='/about'>About</a></li>
+              <li className="nav-item"><a href='/skills'>Skills</a></li>
+              <li className="nav-item"><a href='#'>Projects</a></li>
               <li className="nav-item"><a href='/qualification'>Qualification</a></li>
-              <li className="nav-item"><a href='#contact'>Contact</a></li>
+              <li className="nav-item"><a href='/contact'>Contact</a></li>
           </ul>
           <img src={menu} alt="navigation menu" className='menu' onClick={show}/>
       </nav>

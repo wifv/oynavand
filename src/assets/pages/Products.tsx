@@ -53,7 +53,7 @@ const Products = () => {
             </div>
           </a>
       </div>
-      <button>aaaaaaa</button>
+      <a href='/all-products'>aaaaaaa</a>
     </aside>
   )
 }
