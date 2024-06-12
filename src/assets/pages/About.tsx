@@ -2,7 +2,7 @@ import '../css/aboutme.css'
 import '../css/global.css'
 import testImage from '../images/asdf.jpg'
 
-const AboutMe = () => {
+const About = () => {
   return (
     <section className="about-me">
       <h1 className="text-center h1">About Me</h1>
@@ -43,4 +43,4 @@ const AboutMe = () => {
   )
 }
 
-export default AboutMe
+export default About

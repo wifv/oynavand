@@ -33,10 +33,10 @@ const Footer = () => {
               <a href="#" className='secondary-text'>afsdl;dsfal;fsdl</a>
             </li>
             <li className='footer-link'>
-              <a href="#" className='secondary-text'>afsdl;dsfal;fsdl</a>
+              <a href="/about" className='secondary-text'>Biz Haqimizda</a>
             </li>
             <li className='footer-link'>
-              <a href="#" className='secondary-text'>afsdl;dsfal;fsdl</a>
+              <a href="/contact" className='secondary-text'>Ulanish</a>
             </li>
           </ul>
         </div>

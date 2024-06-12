@@ -23,6 +23,7 @@
   -ms-flex-pack: distribute;
   justify-content: space-around;
   gap: 30px;
+  margin-bottom: 100px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }

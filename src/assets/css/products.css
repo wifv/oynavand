@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
   gap: 30px;
+  padding: 0 5px;
 }
 
 @media (max-width: 600px) {
@@ -46,4 +47,8 @@
     margin-bottom: 7px !important;
     font-size: 18px !important;
   }
+}
+
+textarea {
+  resize: none;
 }
