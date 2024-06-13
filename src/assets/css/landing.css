@@ -4,6 +4,7 @@
   padding: 20px;
   justify-content: center;
   background-color: #f3f3f3;
+  width: 100%;
 }
 
 .landing-slide-small {
@@ -86,11 +87,18 @@
   gap: 30px;
 }
 
-.right-landing {
-  /* max-width: 300px; */
-  min-width: 300px;
+.post-section {
   width: 300px;
-  height: 690px;
+  border-top: 1px solid #E9E9E9;
+  border-bottom: 1px solid #E9E9E9;
+  overflow: scroll;
+}
+
+.post {
+  max-height: 100px;
+  padding: 10px;
+  border-bottom: 1px solid #E9E9E9;
+  cursor: pointer;
 }
 
 @media (max-width: 1326px) {
@@ -137,4 +145,16 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
     gap: 0;
   }
+}
+
+@media (max-width: 600px) {
+  .admins-pick {
+    /* flex-direction: column; */
+    display: none;
+  }
+}
+
+.admins-pick {
+  display: flex;
+  gap: 20px;
 }

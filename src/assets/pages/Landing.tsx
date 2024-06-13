@@ -85,11 +85,39 @@ const Landing = () => {
             </div>
           </a>
         </div>
+        <div className="admins-pick">
+          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
+            <img src={testImage} alt="product image" />
+            <div className="landing-slide-info">
+              <h4 className="landing-slide-date">bugun</h4>
+              <p className='landing-slide-title'>titlexon</p>
+              <p className='landing-slide-price'>pricejon</p>
+            </div>
+          </a>
+          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
+            <img src={testImage} alt="product image" />
+            <div className="landing-slide-info">
+              <h4 className="landing-slide-date">bugun</h4>
+              <p className='landing-slide-title'>titlexon</p>
+              <p className='landing-slide-price'>pricejon</p>
+            </div>
+          </a>
+          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
+            <img src={testImage} alt="product image" />
+            <div className="landing-slide-info">
+              <h4 className="landing-slide-date">bugun</h4>
+              <p className='landing-slide-title'>titlexon</p>
+              <p className='landing-slide-price'>pricejon</p>
+            </div>
+          </a>
+        </div>
       </div>
-      <div className="right-landing">
-          <img src={testImage} alt="image of the owner" className='right-landing'/>
-          <h3 className='right-landing-name'></h3>
-      </div>
+      <section className="post-section">
+        <a href='/post' className="post">
+          <div className="post-date">09.09.24</div>
+          <div className="post-info">devushkaxon</div>
+        </a>
+      </section>
     </div>
   );
 };
