@@ -90,14 +90,14 @@
 .post-section {
   width: 300px;
   border-top: 1px solid #E9E9E9;
-  border-bottom: 1px solid #E9E9E9;
-  overflow: scroll;
+  overflow-y: auto;
+  max-height: 1084px;
+  padding-left: 5px;
 }
 
 .post {
   max-height: 100px;
-  padding: 10px;
-  border-bottom: 1px solid #E9E9E9;
+  margin: 10px;
   cursor: pointer;
 }
 
@@ -149,8 +149,27 @@
 
 @media (max-width: 600px) {
   .admins-pick {
-    /* flex-direction: column; */
+    flex-direction: column;
     display: none;
+  }
+}
+
+@media (max-width: 1366px) {
+  .landing-page {
+    flex-direction: column;
+  }
+
+  .landing-slide-big {
+    max-width: none !important;
+  }
+
+  .left-landing {
+    max-width: none;
+  }
+
+  .post-section {
+    width: 100%;
+    max-height: 600px;
   }
 }
 

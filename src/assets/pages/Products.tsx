@@ -53,7 +53,7 @@ const Products = () => {
             </div>
           </a>
       </div>
-      <a href='/all-products'>aaaaaaa</a>
+      <a href='/all-products' className='view-more'>Hammasini ko'rish</a>
     </aside>
   )
 }

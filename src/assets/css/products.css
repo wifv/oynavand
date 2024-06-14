@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
   gap: 30px;
   padding: 0 5px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 600px) {
@@ -51,4 +52,16 @@
 
 textarea {
   resize: none;
+}
+
+.view-more {
+  width: 160px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 5px;
+  border: 1px solid #E9E9E9;
+  border-radius: 10px;
 }

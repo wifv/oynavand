@@ -1,12 +1,15 @@
 const AllProducts = () => {
-  // fetch("bombaxon", {
-  //   method: "GET",
-  //   headers: {}
-  // })
-  // .then(response => {response.json()})
-  // .then((data): any => {
-  //   console.log(data)
-  // })
+  fetch("https://192.168.1.6:8080/", {
+    method: "GET",
+    headers: {
+      Api_key: "",
+      "Content-Type": "application/json"
+    }
+  })
+  .then(response => {response.json()})
+  .then((data): any => {
+    console.log(data)
+  })
 
   return (
     <div>
