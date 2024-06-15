@@ -17,8 +17,6 @@ const Navbar = () => {
           <a className="logo" href='/'>OYNAVAND</a>
           <ul className={showMenu ? "active-nav-right" : "nav-right"} id='nav-right'>
               <li className="nav-item"><a href='/about'>Biz Haqimizda</a></li>
-              <li className="nav-item"><a href='/skills'>Skills</a></li>
-              <li className="nav-item"><a href='#'>Projects</a></li>
               <li className="nav-item"><a href='/contact'>Bog'lanish</a></li>
           </ul>
           <img src={menu} alt="navigation menu" className='menu' onClick={show}/>
