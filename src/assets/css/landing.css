@@ -101,6 +101,10 @@
   cursor: pointer;
 }
 
+.post-info {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 1326px) {
   .landing-slide-small {
     flex-direction: column;

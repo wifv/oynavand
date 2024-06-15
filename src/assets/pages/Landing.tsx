@@ -14,9 +14,9 @@ const Landing = () => {
         <Swiper
           slidesPerView={1}
           loop={true}
-          // autoplay={
-          //   {delay: 5000}
-          // }
+          autoplay={
+            {delay: 5000}
+          }
           modules={[Autoplay]}
           className='landing-swiper'
         >
@@ -115,7 +115,7 @@ const Landing = () => {
       <section className="post-section">
         <a href='/post' className="post">
           <div className="post-date">09.09.24</div>
-          <div className="post-info">devushkaxon</div>
+          <div className="post-info">informatsiya</div>
           <hr />
         </a>
       </section>
