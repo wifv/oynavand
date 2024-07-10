@@ -16,22 +16,19 @@ const Footer = () => {
           <div className="main-text">Biz Haqimizda</div>
           <ul className='footer-social-links footer-links'>
             <li className='footer-link'>
-              <a href="#" className='secondary-text'>afsdl;dsfal;fsdl</a>
+              <a href="https://t.me/bdfelka" className='secondary-text'>Nimadir</a>
             </li>
             <li className='footer-link'>
-              <a href="#" className='secondary-text'>afsdl;dsfal;fsdl</a>
+              <a href="https://t.me/bdfelka" className='secondary-text'>Instagram</a>
             </li>
             <li className='footer-link'>
-              <a href="#" className='secondary-text'>afsdl;dsfal;fsdl</a>
+              <a href="https://t.me/bdfelka" className='secondary-text' target='blank'>Telegram</a>
             </li>
           </ul>
         </div>
         <div className="footer-section-2-links">
           <div className="main-text">Sayt Havolalari</div>
           <ul className='footer-navigation-links footer-links secondary-text'>
-            <li className='footer-link'>
-              <a href="#" className='secondary-text'>afsdl;dsfal;fsdl</a>
-            </li>
             <li className='footer-link'>
               <a href="/about" className='secondary-text'>Biz Haqimizda</a>
             </li>

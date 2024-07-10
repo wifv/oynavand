@@ -18,8 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/product-info' element={<Product />}/>
         <Route path='/all-products' element={<AllProducts />}/>
         <Route path='/contact' element={<Contact />}/>
-        <Route path='/About' element={<About />}/>
-      </Routes>
+        <Route path='/about' element={<About />}/>
+       </Routes>
     </BrowserRouter>
   </React.StrictMode>
 )

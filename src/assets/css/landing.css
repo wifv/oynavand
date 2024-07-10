@@ -163,6 +163,16 @@
     flex-direction: column;
   }
 
+  .small-slides {
+    max-width: none;
+  }
+
+  .landing-swiper,
+  .landing-slide
+  {
+    max-width: 100% !important;
+  }
+
   .landing-slide-big {
     max-width: none !important;
   }

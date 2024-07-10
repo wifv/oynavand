@@ -6,7 +6,6 @@ import './app.css'
 import Footer from "./assets/pages/Footer"
 
 const App = () => {
-  
 
   return (
     <main className="app">

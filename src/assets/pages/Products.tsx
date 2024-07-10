@@ -1,57 +1,33 @@
 import '../css/products.css'
 import testImage from '../images/asdf.jpg'
+import { useEffect, useState } from "react"
+import { getProjects, Project } from './Api';
+
+
 const Products = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const data = await getProjects(6, true);
+      setProjects(data);
+    };
+    fetchProjects();
+  }, []);
+
   return (
     <aside className='products-page'>
       <div className="small-slides-variant-2">
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
+        {projects.map((project, i) => (
+          <a key={i} href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
+            <img src={project.image} alt="product image" />
             <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
+              <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
+              <p className='landing-slide-title'>{project.name}</p>
+              <p className='landing-slide-price'>{project.price}</p>
             </div>
           </a>
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
+        ))}
       </div>
       <a href='/all-products' className='view-more'>Hammasini ko'rish</a>
     </aside>
