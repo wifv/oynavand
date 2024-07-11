@@ -1,13 +1,23 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import testImage from '../images/asdf.jpg'
+import { useEffect, useState } from "react"
+import { getProjects, Project } from './Api';
 import '../css/landing.css'
 import '../css/global.css'
-import testImage from '../images/asdf.jpg'
-
-// Import Swiper styles
 import 'swiper/css';
 
 const Landing = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const data = await getProjects(9, true);
+      setProjects(data);
+    };
+    fetchProjects();
+  }, []);
+
   return (
     <div className="landing-page">
       <div className="left-landing">
@@ -20,96 +30,48 @@ const Landing = () => {
           modules={[Autoplay]}
           className='landing-swiper'
         >
-          <SwiperSlide className='landing-slide'>
-            <a href="/product-info" className='landing-slide-big'>
-              <img src={testImage} alt="product image" />
-              <div className="landing-slide-info">
-                <h4 className="landing-slide-date">bugun</h4>
-                <p className='landing-slide-title'>titlexon</p>
-                <p className='landing-slide-price'>pricejon</p>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide className='landing-slide'>
-            <a href="/product-info" className='landing-slide-big'>
-              <img src={testImage} alt="product image" />
-              <div className="landing-slide-info">
-                <h4 className="landing-slide-date">bugun</h4>
-                <p className='landing-slide-title'>titlexon</p>
-                <p className='landing-slide-price'>pricejon</p>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide className='landing-slide'>
-            <a href="/product-info" className='landing-slide-big'>
-              <img src={testImage} alt="product image" />
-              <div className="landing-slide-info">
-                <h4 className="landing-slide-date">bugun</h4>
-                <p className='landing-slide-title'>titlexon</p>
-                <p className='landing-slide-price'>pricejon</p>
-              </div>
-            </a>
-          </SwiperSlide>
+          {
+            projects.slice(0,3).map((project, i) => (
+              <SwiperSlide className='landing-slide' key={i}>
+                <a href="/product-info" className='landing-slide-big'>
+                  <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
+                  <div className="landing-slide-info">
+                    <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
+                    <p className='landing-slide-title'>{project.name}</p>
+                    <p className='landing-slide-price'>{project.price}</p>
+                  </div>
+                </a>
+              </SwiperSlide>
+            ))
+          }
         </Swiper>
         <div className="small-slides">
-          <a href="/product-info" className='landing-slide-small'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
+          {
+            projects.slice(3, 6).map((project, i) => (
+              <a href="/product-info" className='landing-slide-small' key={i}>
+                <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
+                <div className="landing-slide-info">
+                  <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
+                  <p className='landing-slide-title'>{project.name}</p>
+                  <p className='landing-slide-price'>{project.price}</p>
+                </div>
+              </a>
+            ))
+          }
         </div>
         <div className="admins-pick">
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
-          <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={testImage} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">bugun</h4>
-              <p className='landing-slide-title'>titlexon</p>
-              <p className='landing-slide-price'>pricejon</p>
-            </div>
-          </a>
+          {
+            projects.slice(6, 9).map((project, i) => (
+              <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
+                <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
+                <div className="landing-slide-info">
+                  <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
+                  <p className='landing-slide-title'>{project.name}</p>
+                  <p className='landing-slide-price'>{project.price}</p>
+                </div>
+              </a>
+            ))
+          }
         </div>
       </div>
       <section className="post-section">

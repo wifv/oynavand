@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react"
-import { getProjects, getImages, Project } from './Api';
+import { getProjects, Project } from './Api';
 import '../css/allproducts.css'
 
 const AllProducts = () => {
   let t = 9
   const [projects, setProjects] = useState<Project[]>([]);
-  const [images, setImages] = useState<never[] | ReadableStream<Uint8Array> | null>();
   const [n, setN] = useState(t)
   
   useEffect(() => {
@@ -14,12 +13,6 @@ const AllProducts = () => {
       setProjects(data);
     };
     fetchProjects();
-    const fetchImages = async () => {
-      const data = await getImages(1);
-      setImages(data)
-      console.log(data)
-    };
-    fetchImages();
   }, [n]);
 
 

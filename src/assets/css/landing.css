@@ -188,6 +188,7 @@
 }
 
 .admins-pick {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
   gap: 20px;
 }

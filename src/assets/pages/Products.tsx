@@ -9,7 +9,7 @@ const Products = () => {
   
   useEffect(() => {
     const fetchProjects = async () => {
-      const data = await getProjects(6, true);
+      const data = await getProjects(1000000, true);
       setProjects(data);
     };
     fetchProjects();
@@ -18,9 +18,9 @@ const Products = () => {
   return (
     <aside className='products-page'>
       <div className="small-slides-variant-2">
-        {projects.map((project, i) => (
+        {projects.slice(9, 12).map((project, i) => (
           <a key={i} href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={project.image} alt="product image" />
+            <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
             <div className="landing-slide-info">
               <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
               <p className='landing-slide-title'>{project.name}</p>
