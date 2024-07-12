@@ -1,10 +1,9 @@
 import '../css/products.css'
-import testImage from '../images/asdf.jpg'
 import { useEffect, useState } from "react"
 import { getProjects, Project } from './Api';
 
 
-const Products = ({darkTheme, setDarkTheme}: any) => {
+const Products = ({darkTheme}: any) => {
   const [projects, setProjects] = useState<Project[]>([]);
   
   useEffect(() => {

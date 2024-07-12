@@ -39,10 +39,10 @@ const App = () => {
       <img src={darkThemeIcon} alt="dark theme icon" className={darkTheme ? "dark-theme-icon light-theme" : 'dark-theme-icon'} id="dark-theme-icon" onClick={handleTheme}/>
       <Introduction />
       <div className="app-container">
-        <Landing darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
-        <Products darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+        <Landing darkTheme={darkTheme}/>
+        <Products darkTheme={darkTheme}/>
       </div>
-      <Footer darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+      <Footer darkTheme={darkTheme}/>
     </main>
   )
 }

@@ -1,13 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import testImage from '../images/asdf.jpg'
 import { useEffect, useState } from "react"
 import { getProjects, Project } from './Api';
 import '../css/landing.css'
 import '../css/global.css'
 import 'swiper/css';
 
-const Landing = ({darkTheme, setDarkTheme}: any) => {
+const Landing = ({darkTheme}: any) => {
   const [projects, setProjects] = useState<Project[]>([]);
   
   useEffect(() => {

@@ -1,6 +1,6 @@
 import '../css/global.css'
 import '../css/footer.css'
-const Footer = ({darkTheme, setDarkTheme}: any) => {
+const Footer = ({darkTheme}: any) => {
   return (
     <footer className={darkTheme ? 'footer dark-theme' : 'footer'}>
       <div className="footer-section-1 footer-section logo">OYNAVAND</div>
