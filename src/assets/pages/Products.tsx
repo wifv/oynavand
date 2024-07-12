@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { getProjects, Project } from './Api';
 
 
-const Products = () => {
+const Products = ({darkTheme, setDarkTheme}: any) => {
   const [projects, setProjects] = useState<Project[]>([]);
   
   useEffect(() => {
@@ -16,9 +16,9 @@ const Products = () => {
   }, []);
 
   return (
-    <aside className='products-page'>
+    <aside className={darkTheme ? 'products-page dark-theme' : 'products-page'}>
       <div className="small-slides-variant-2">
-        {projects.slice(9, 12).map((project, i) => (
+        {projects.slice(8, 11).map((project, i) => (
           <a key={i} href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
             <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
             <div className="landing-slide-info">

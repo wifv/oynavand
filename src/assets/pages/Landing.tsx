@@ -7,7 +7,7 @@ import '../css/landing.css'
 import '../css/global.css'
 import 'swiper/css';
 
-const Landing = () => {
+const Landing = ({darkTheme, setDarkTheme}: any) => {
   const [projects, setProjects] = useState<Project[]>([]);
   
   useEffect(() => {
@@ -19,7 +19,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="landing-page">
+    <div className={darkTheme ? "landing-page dark-theme" : 'landing-page'}>
       <div className="left-landing">
         <Swiper
           slidesPerView={1}
@@ -47,7 +47,7 @@ const Landing = () => {
         </Swiper>
         <div className="small-slides">
           {
-            projects.slice(3, 6).map((project, i) => (
+            projects.slice(3, 5).map((project, i) => (
               <a href="/product-info" className='landing-slide-small' key={i}>
                 <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
                 <div className="landing-slide-info">
@@ -61,8 +61,8 @@ const Landing = () => {
         </div>
         <div className="admins-pick">
           {
-            projects.slice(6, 9).map((project, i) => (
-              <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
+            projects.slice(5, 8).map((project, i) => (
+              <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2' key={i}>
                 <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
                 <div className="landing-slide-info">
                   <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>

@@ -1,3 +1,7 @@
+.form-wrapper {
+  height: 100vh;
+}
+
 .submit-btn {
   font-size: 18px;
   color: white;

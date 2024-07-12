@@ -3,3 +3,23 @@
   width: 100%;
   margin: auto;
 }
+
+.dark-theme-icon {
+  position: fixed;
+  z-index: 12;
+  width: 50px;
+  top: 30px;
+  right: 250px;
+  border-radius: 50%;
+}
+
+#dark-theme-icon {
+  background-color: white !important;
+}
+
+@media (max-width: 600px) {
+  .dark-theme-icon {
+    right: 70px;
+    top: 16px;
+  }
+}

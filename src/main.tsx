@@ -11,7 +11,6 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Navbar />
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}/>

@@ -25,3 +25,66 @@ hr {
 .secondary-text {
   color: gray;
 }
+
+body * {
+  transition: color 0.5s;
+}
+
+.light-theme {
+  background-color: white !important;
+}
+
+.dark-theme,
+.dark-theme * {
+  background-color: #19181d !important;
+  color: rgb(189, 189, 189) !important;
+}
+
+.dark-theme .landing-slide-info,
+.dark-theme .landing-slide-info * {
+  background-color: #222 !important;
+}
+
+.dark-theme .nav,
+.dark-theme #container {
+  background-color: #1a1a1a !important;
+}
+
+#oynavand {
+  background-color: transparent !important;
+}
+
+.dark-theme .about-me,
+.dark-theme .about-me * {
+  background-color: #222 !important;
+}
+
+.dark-theme .me-right-1 svg {
+  fill: #fff !important;
+}
+
+.dark-theme footer *,
+.dark-theme footer {
+  background-color: #1a1a1a !important;
+}
+
+.dark-theme .hello-btn,
+.dark-theme .me-right-1 {
+  border: 1px solid white;
+}
+
+@media (max-width: 969px) {
+  .dark-theme .about-me {
+    height: 100%;
+  }
+
+  .me-right {
+    align-items: center !important;
+  }
+
+  .me-right-block {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    text-align: center;
+  }
+}

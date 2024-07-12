@@ -4,7 +4,7 @@ import '../css/introduction.css'
 const Introduction = () => {
   return (
     <div className='introduction-page'>
-      <h1>
+      <h1 id='oynavand'>
         OYNAVAND.UZ
       </h1>
     </div>

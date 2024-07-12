@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getProjects, Project } from './Api';
 import '../css/allproducts.css'
+import Navbar from "./Navbar";
 
 const AllProducts = () => {
   let t = 9
@@ -18,6 +19,8 @@ const AllProducts = () => {
 
   return (
     <aside className='products-page'>
+      <Navbar />
+
       <div className="small-slides-variant-2">
         {projects.map((project, i) => (
           <a key={i} href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>

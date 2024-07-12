@@ -31,8 +31,6 @@
 
 .nav ul li {
   border-bottom: 1px solid #FAFAFA;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   cursor: pointer;
 }
 
@@ -90,8 +88,6 @@
 .logo {
   font-size: 25px;
   border-bottom: 1px solid #FAFAFA;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .logo:hover {

@@ -3,6 +3,8 @@ import "../css/contact.css"
 import mail from '../images/mail.svg'
 import instagram from '../images/instagram.svg'
 import telegram from '../images/telegram.svg'
+import Navbar from "./Navbar"
+import { useEffect, useState } from "react"
 
 const Contact = () => {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -27,9 +29,21 @@ const Contact = () => {
         }
     })
   }
+
+  const [darkTheme, setDarkTheme] = useState(false)
+
+  useEffect(() => {
+    if (localStorage.getItem('darkTheme') === 'false') {
+      setDarkTheme(false)
+    } else {
+      setDarkTheme(true)
+    }
+  })
   
   return (
-    <div>
+    <div className={darkTheme ? "dark-theme form-wrapper" : 'form-wrapper'}>
+      <Navbar />
+
       <h1 className="text-center">Bog'lanish</h1>
 
       <br /><br /><br /><br /><br />
