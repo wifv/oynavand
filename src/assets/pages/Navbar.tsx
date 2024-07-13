@@ -20,7 +20,7 @@ const Navbar = () => {
   })
 
   return (
-    <div className={darkTheme ? 'container dark-theme' : "container"} id='container'>
+    <div className={darkTheme ? 'container dark-theme' : "container"}>
       <nav className={darkTheme ? 'nav dark-theme' : "nav"}>
           <a className="logo" href='/'>OYNAVAND</a>
           <ul className={showMenu ? "active-nav-right" : "nav-right"} id='nav-right'>

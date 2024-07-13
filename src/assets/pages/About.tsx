@@ -16,7 +16,7 @@ const About = () => {
   
   return (
     <section className={darkTheme ? 'about-me-wrapper dark-theme' : 'about-me-wrapper'}>
-        <Navbar />
+      <Navbar />
       <section className={darkTheme ? 'about-me dark-theme' : 'about-me'}>
         <h1 className="text-center h1">About Me</h1>
         <h5 className="text-center color-2">My Introduction</h5>

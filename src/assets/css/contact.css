@@ -1,5 +1,6 @@
 .form-wrapper {
   height: 100vh;
+  padding-top: 50px;
 }
 
 .submit-btn {
@@ -93,3 +94,4 @@
 .svg {
   width: 28px;
 }
+
