@@ -6,4 +6,15 @@ button {
   background-color: white;
   border: 2px solid;
   cursor: pointer;
+  margin-left: 5px;
+}
+
+.products-page-container {
+  height: 100vh;
+}
+
+@media (min-width: 1600px) {
+  .all-products {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }

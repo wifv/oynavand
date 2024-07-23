@@ -95,3 +95,8 @@
   width: 28px;
 }
 
+@media (max-width: 706px) {
+  .wrapper .footer {
+    margin-top: 300px;
+  }
+}

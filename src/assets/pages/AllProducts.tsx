@@ -2,9 +2,12 @@ import { useEffect, useState } from "react"
 import { getProjects, Project } from './Api';
 import '../css/allproducts.css'
 import Navbar from "./Navbar";
+import Product from "./Product";
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const AllProducts = () => {
-  let t = 9
+  let t = 10
   const [projects, setProjects] = useState<Project[]>([]);
   const [n, setN] = useState(t)
   
@@ -15,27 +18,33 @@ const AllProducts = () => {
     };
     fetchProjects();
   }, [n]);
+  
+  const [darkTheme, setDarkTheme] = useState(false)
 
+  useEffect(() => {
+    if (localStorage.getItem('darkTheme') === 'false') {
+      setDarkTheme(false)
+    } else {
+      setDarkTheme(true)
+    }
+  })
 
   return (
-    <aside className='products-page'>
+    <section className="products-page-container">
       <Navbar />
+      <aside className={darkTheme ? 'dark-theme products-page' : 'products-page'}>
 
-      <div className="small-slides-variant-2">
-        {projects.map((project, i) => (
-          <a key={i} href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
-            <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
-            <div className="landing-slide-info">
-              <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
-              <p className='landing-slide-title'>{project.name}</p>
-              <p className='landing-slide-price'>{project.price}</p>
-            </div>
-          </a>
-        ))}
-      </div>
-      <button type="button" onClick={() => { setN(n+t) }}>Ko'proq ko'rish</button>
-      <button type="button" onClick={() => { setN(100000) }}>Hammasini ochish</button>
-    </aside>
+        <div className="small-slides-variant-2 all-products">
+          {projects.map((project) => (
+            <Link to={`/all-products/${project.id}`} key={project.id}>
+              <Product project={project}/>
+            </Link>
+          ))}
+        </div>
+        <button type="button" onClick={() => { setN(n+t) }}>Ko'proq ko'rish</button>
+      <Footer />
+      </aside>
+    </section>
   )
 }
 

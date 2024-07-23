@@ -7,11 +7,12 @@
   width: 100%;
 }
 
-.landing-slide-small {
-  display: flex;
-  max-width: 500px;
-  width: 100%;
+.small-slides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 1%;
   margin-bottom: 30px;
+  height: auto;
 }
 
 .landing-slide-big {
@@ -33,12 +34,6 @@
   font-weight: bold;
 }
 
-.small-slides {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  width: 100%;
-}  
 .landing-slide-small-variant-1 {
   flex-direction: column;
   max-width: 33%;
@@ -63,7 +58,7 @@
 }
 
 .landing-slide-big img {
-  max-height: 300px;
+  min-height: 400px;
 }
 
 .landing-slide-small img {
@@ -105,66 +100,44 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 1326px) {
-  .landing-slide-small {
-    flex-direction: column;
-    max-width: none !important;
-  }
+.admins-pick {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+  gap: 1%;
+}
 
+@media (max-width: 1326px) {
   .landing-slide-small img {
     max-height: 100% !important;
   }
-
+  
   .right-landing {
-    display: none;
-  }
-
-  .small-slides {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)) !important;
-    gap: 5px;
-  }
-
-  .landing-slide-small:nth-child(4) {
     display: none;
   }
 
   .landing-slide-big {
     flex-direction: column;
   }
-
+  
   .landing-slide-big img {
     max-height: 100% !important;
   }
-}
 
-@media (max-width: 1016px) {
-  .landing-slide-small:nth-child(4) {
-    display: flex;
-  }
-}
-
-@media (max-width: 350px) {
-  .small-slides {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-    gap: 0;
-  }
-}
-
-@media (max-width: 600px) {
   .admins-pick {
-    flex-direction: column;
-    display: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .landing-slide-small-variant-2 {
+    min-width: 350px;
   }
 }
 
 @media (max-width: 1366px) {
   .landing-page {
     flex-direction: column;
-  }
-
-  .small-slides {
-    max-width: none;
   }
 
   .landing-swiper,
@@ -187,8 +160,8 @@
   }
 }
 
-.admins-pick {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-  gap: 20px;
+@media (max-width: 830px) {
+  .small-slides {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  }
 }

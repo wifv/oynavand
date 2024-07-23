@@ -3,6 +3,7 @@ import '../css/aboutme.css'
 import '../css/global.css'
 import testImage from '../images/asdf.jpg'
 import Navbar from './Navbar'
+import Footer from './Footer';
 
 const About = () => {
   const [darkTheme, setDarkTheme] = useState(Boolean)
@@ -53,6 +54,7 @@ const About = () => {
             </div>
         </div>
       </section>
+      <Footer />
     </section>
   )
 }

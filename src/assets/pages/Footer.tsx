@@ -1,5 +1,6 @@
 import '../css/global.css'
 import '../css/footer.css'
+
 const Footer = ({darkTheme}: any) => {
   return (
     <footer className={darkTheme ? 'footer dark-theme' : 'footer'}>

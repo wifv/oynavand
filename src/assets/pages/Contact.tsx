@@ -1,20 +1,21 @@
 import { ChangeEvent, useEffect, useState } from "react"
+import Navbar from "./Navbar"
+import { API } from "../../Export";
 import "../css/contact.css"
 import "../css/global.css"
-import Navbar from "./Navbar"
+import Footer from "./Footer";
 
 interface Email {
   name: string;
-  number: number;
-  text: string;
+  phone: string;
+  messageText: string;
 }
-
 
 const Contact = () => {
   const [email, setEmail] = useState<Email>({
     name: '',
-    number: 1,
-    text: '',
+    phone: '',
+    messageText: '',
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,12 +26,13 @@ const Contact = () => {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     try {
       e.preventDefault();
-      const formData = new FormData();
-      formData.append('project', JSON.stringify(email));
-  
-      fetch("http://localhost:8081/api/v1/email/send?name=namejon&phone=%2B998993057664&messageText=messageeeee", {
-          method: 'GET',
-          // body: formData
+
+      fetch(`
+          ${API}email/send?
+          name=${email.name}&
+          phone=${email.phone}&
+          messageText=${email.messageText}`,{
+            method: 'GET',
       }).then(response => {
           if (response.ok) {
              console.log(response)
@@ -40,10 +42,9 @@ const Contact = () => {
       })
     } catch (error) {
       console.log(error);
-      
     }
   }
-
+  
   const [darkTheme, setDarkTheme] = useState(false)
 
   useEffect(() => {
@@ -55,8 +56,8 @@ const Contact = () => {
   })
   
   return (
-      <div className={darkTheme ? "wrapper dark-theme" : 'wrapper'}>
-        <Navbar />
+    <div className={darkTheme ? "wrapper dark-theme" : 'wrapper'}>
+      <Navbar />
       <div className={darkTheme ? "form-wrapper dark-theme" : 'form-wrapper'} id="form-wrapper">
 
         <h1 className="text-center">Bog'lanish</h1>
@@ -92,13 +93,14 @@ const Contact = () => {
           </div>
           <form id="form" name="form" className="form" onSubmit={handleSubmit}>
             <div className="text-center">Bizga Habar Yuboring</div>
-            <input type="text" name="name" placeholder="Ismingizni yozing" required onChange={handleChange}/>
-            <input type="number" name="number" placeholder="Telefon raqamingizni yozing" required onChange={handleChange}/>
-            <textarea name="text" id="form-text" cols={30} rows={10} placeholder="Habaringizni yozing" required onChange={handleChange}></textarea>
+            <input type="text" value={email.name} name="name" placeholder="Ismingizni yozing" required onChange={handleChange}/>
+            <input type="text" value={email.phone} name="phone" placeholder="Telefon raqamingizni yozing" required onChange={handleChange}/>
+            <textarea name="messageText" value={email.messageText} id="form-text" cols={30} rows={10} placeholder="Habaringizni yozing" required onChange={handleChange}></textarea>
             <button type="submit" className="submit-btn">Habar Yuborish</button>
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

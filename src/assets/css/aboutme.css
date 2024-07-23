@@ -1,9 +1,5 @@
-.about-me-wrapper {
-  height: 100vh;
-}
-
 .about-me {
-  padding: 50px 0 60px 0;
+  padding: 100px 10px;
 }
 
 .me-block {
@@ -94,6 +90,10 @@
 
 @media (max-width: 986px) {
   .about-me {
-    margin-bottom: 500px;
+    margin-bottom: 400px;
   }
+}
+
+.about-me-wrapper .footer {
+  margin: 150px auto 0 auto;
 }

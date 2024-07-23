@@ -1,10 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { getProjects, Project } from './Api';
-import '../css/landing.css'
-import '../css/global.css'
+import { Link } from 'react-router-dom';
+import '../css/landing.css';
+import '../css/global.css';
 import 'swiper/css';
+import Post from './Post';
 
 const Landing = ({darkTheme}: any) => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -23,65 +25,75 @@ const Landing = ({darkTheme}: any) => {
         <Swiper
           slidesPerView={1}
           loop={true}
-          autoplay={
-            {delay: 5000}
-          }
+          autoplay={{ delay: 5000 }}
           modules={[Autoplay]}
           className='landing-swiper'
         >
           {
-            projects.slice(0,3).map((project, i) => (
-              <SwiperSlide className='landing-slide' key={i}>
-                <a href="/product-info" className='landing-slide-big'>
+            projects.slice(0, 3).map((project) => (
+              <SwiperSlide key={project.id} className='landing-slide'>
+                <Link to={`/all-products/${project.id}`} className='landing-slide-big'>
                   <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
                   <div className="landing-slide-info">
                     <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
                     <p className='landing-slide-title'>{project.name}</p>
                     <p className='landing-slide-price'>{project.price}</p>
                   </div>
-                </a>
+                </Link>
               </SwiperSlide>
             ))
           }
         </Swiper>
         <div className="small-slides">
           {
-            projects.slice(3, 5).map((project, i) => (
-              <a href="/product-info" className='landing-slide-small' key={i}>
-                <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
+            projects.slice(3, 9).map((project) => (
+              <Link to={`/all-products/${project.id}`} key={project.id} className='landing-slide-small'>
+                <div
+                  style={{
+                    backgroundImage: `url(data:image/jpeg;base64,${project.images[0]})`,
+                    width: '100%',
+                    minHeight: '400px',
+                    backgroundSize: 'cover', // Adjust as needed
+                    backgroundPosition: 'center', // Adjust as needed
+                  }}
+                ></div>
                 <div className="landing-slide-info">
                   <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
                   <p className='landing-slide-title'>{project.name}</p>
                   <p className='landing-slide-price'>{project.price}</p>
                 </div>
-              </a>
+              </Link>
             ))
           }
         </div>
-        <div className="admins-pick">
+        {/* <div className="admins-pick">
           {
-            projects.slice(5, 8).map((project, i) => (
-              <a href="/product-info" className='landing-slide-small-variant-2 landing-slide-small-variant-2' key={i}>
-                <img src={`data:image/jpeg;base64,${project.images[0]}`} alt="product image" />
+            projects.slice(5, 8).map((project) => (
+              <Link to={`/all-products/${project.id}`} key={project.id} className='landing-slide-small-variant-2 landing-slide-small-variant-2'>
+                <div
+                  style={{
+                    backgroundImage: `url(data:image/jpeg;base64,${project.images[0]})`,
+                    width: '100%',
+                    minHeight: '400px',
+                    backgroundSize: 'cover', // Adjust as needed
+                    backgroundPosition: 'center', // Adjust as needed
+                  }}
+                ></div>
                 <div className="landing-slide-info">
                   <h4 className="landing-slide-date">{project.createdAt.slice(0, 10)}</h4>
                   <p className='landing-slide-title'>{project.name}</p>
                   <p className='landing-slide-price'>{project.price}</p>
                 </div>
-              </a>
+              </Link>
             ))
           }
-        </div>
+        </div> */}
       </div>
       <section className="post-section">
-        <a href='/post' className="post">
-          <div className="post-date">09.09.24</div>
-          <div className="post-info">informatsiya</div>
-          <hr />
-        </a>
+        <Post />
       </section>
     </div>
   );
 };
 
-export default Landing
+export default Landing;
