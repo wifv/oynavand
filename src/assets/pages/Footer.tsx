@@ -17,13 +17,13 @@ const Footer = ({darkTheme}: any) => {
           <div className="main-text">Biz Haqimizda</div>
           <ul className='footer-social-links footer-links'>
             <li className='footer-link'>
-              <a href="https://t.me/bdfelka" className='secondary-text'>Nimadir</a>
+              <a href="https://t.me/Nizomiddinusta" className='secondary-text'>WhatsApp</a>
             </li>
             <li className='footer-link'>
-              <a href="https://t.me/bdfelka" className='secondary-text'>Instagram</a>
+              <a href="https://t.me/Nizomiddinusta" className='secondary-text'>Instagram</a>
             </li>
             <li className='footer-link'>
-              <a href="https://t.me/bdfelka" className='secondary-text' target='blank'>Telegram</a>
+              <a href="https://t.me/Nizomiddinusta" className='secondary-text' target='blank'>Telegram</a>
             </li>
           </ul>
         </div>

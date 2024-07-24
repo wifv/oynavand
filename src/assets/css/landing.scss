@@ -1,21 +1,13 @@
 .landing-slide-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background-color: #f3f3f3;
   width: 100%;
 }
 
 .small-slides {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 1%;
@@ -24,8 +16,6 @@
 }
 
 .landing-slide-big {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   max-width: 1000px;
@@ -45,28 +35,18 @@
 }
 
 .landing-slide-small-variant-1 {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-width: 33%;
 }
 
 .small-slides-variant-1 {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .landing-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   /* flex-wrap: wrap; */
   max-width: 100%;
   gap: 10px;
@@ -97,13 +77,8 @@
 .left-landing {
   max-width: 1000px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -131,7 +106,6 @@
 }
 
 .admins-pick {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
   gap: 1%;
@@ -141,52 +115,52 @@
   .landing-slide-small img {
     max-height: 100% !important;
   }
+  
   .right-landing {
     display: none;
   }
+
   .landing-slide-big {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+  
   .landing-slide-big img {
     max-height: 100% !important;
   }
+
   .admins-pick {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 20px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
+
 @media (max-width: 1366px) {
   .landing-page {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   .landing-swiper,
-  .landing-slide {
+  .landing-slide
+  {
     max-width: 100% !important;
   }
+
   .landing-slide-big {
     max-width: none !important;
   }
+
   .left-landing {
     max-width: none;
   }
+
   .post-section {
     width: 100%;
     max-height: 600px;
   }
 }
+
 @media (max-width: 830px) {
   .small-slides {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;

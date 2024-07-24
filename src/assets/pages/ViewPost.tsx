@@ -33,13 +33,19 @@ const Post = () => {
       <Navbar />
       {
         post ? (
-          <div>
-          <Link to={`/posts/${post.id}`} className="post">
-            <h1>{post.title}</h1>
+        <div className='post-detail'>
+          <div className="post">
+            <h1 style={{letterSpacing: '1px'}}>{post.title}</h1>
             <br />
-            <h2>{post.text}</h2>
-            <div className='color-2'>{post.createdAt.slice(0, 10)}</div>
-          </Link>
+            <h2 style={
+              {
+                fontSize: '20px',
+                fontWeight: '400',
+                letterSpacing: '1px'
+              }
+             }>{post.text}</h2>
+            <div className='color-2 post-date'>{post.createdAt.slice(0, 10)}</div>
+          </div>
         </div>
         ) : (
           "loading"

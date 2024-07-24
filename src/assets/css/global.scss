@@ -27,7 +27,6 @@ hr {
 }
 
 body * {
-  -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 
@@ -74,11 +73,11 @@ body * {
 }
 
 .dark-theme .hello-btn {
-  border: 2px solid rgb(189, 189, 189) !important;
+  border: 2px solid rgb(189, 189, 189) !important;;
 }
 
 .wrapper .dark-theme *,
-.wrapper .dark-theme {
+.wrapper .dark-theme  {
   background-color: #222 !important;
 }
 
@@ -103,20 +102,18 @@ body * {
   .dark-theme .about-me {
     height: 100vh;
   }
+
   .me-right {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
+    align-items: center !important;
   }
+
   .me-right-block {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
     text-align: center;
   }
 }
+
 .dark-theme .detail-wrapper *,
 .dark-theme .detail-wrapper {
   background-color: #222222 !important;
@@ -142,7 +139,6 @@ body * {
 
 .posts {
   padding: 0 20px;
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
@@ -158,11 +154,7 @@ body * {
 
 .post-date {
   position: absolute;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   top: 5px;
   right: 5px;
