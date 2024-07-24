@@ -1,1 +1,1 @@
-export const API = import.meta.env.VITE_API_URL || 'https:c51c-90-156-162-42.ngrok-free.app:8080/api/v1/';
+export const API = import.meta.env.VITE_API_URL || 'https://c51c-90-156-162-42.ngrok-free.app:8080/api/v1/';
