@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { API } from '../../Export'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
